@@ -208,13 +208,9 @@ body {
 
 .even-columns {
   display: grid;
-  gap: 1rem;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.container {
-  margin-inline: auto;
-}
+
 .container {
   --max-width: 1165px;
   --container-padding: 135px;
@@ -251,7 +247,7 @@ body {
   border: 2px solid var(--clr-accent-400);
   border-radius: var(--size-200) ;
   color: var(--clr-accent-400);
-  background-color: white;
+  background-color: var(--clr-primary-400);
   line-height: var(--size-500);
 }
 .normal-button {
@@ -289,3 +285,29 @@ body {
 .search-bar button {
   padding-left: 20px;
 }
+
+.card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  margin-inline: auto;
+}
+
+.grid-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.card-holder {
+  width: 356px ;
+  height: 385px;
+  /* border: 2px solid blue; */
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px var(--clr-neutral-400)
+}
+
+.card-holder > * {
+  margin-inline: auto;
+  margin-top: var(--size-600);
+}
+
