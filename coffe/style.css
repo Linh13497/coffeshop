@@ -120,11 +120,86 @@ svg {
 
 /* button */
 
-
+.cart-button {
+  height: 43px;
+  width: 43px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.small-button {
+  font-size: var(--fs-small-button);
+  font-weight: var(--fw-semi-bold);
+  width: var(--size-800);
+  height: var(--size-600);
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid var(--clr-accent-400);
+  border-radius: var(--size-200) ;
+  color: var(--clr-accent-400);
+  background-color: var(--clr-primary-400);
+  line-height: var(--size-500);
+}
+.normal-button {
+  font-size: var(--fs-normal-button);
+  font-weight: var(--fw-semi-bold);
+  width: 150px;
+  height: var(--size-700);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: var(--size-600) ;
+  color: var(--clr-primary-400);
+  background-color: var(--clr-neutral-400);
+  box-shadow: 0px 4px 32px rgba(223, 195, 124, 0.25); 
+}
 
 /* navigation */
 
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1rem,4vw,3rem);
+}
 
+.search-bar {
+  width: 222px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid red;
+  border-radius: var(--size-500) ;
+  padding-right: 50px;
+  
+
+}
+.search-bar input {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-regular);
+  line-height: var(--size-400);
+  border: none;
+  padding-left: 10px;
+}
+
+.search-bar button {
+  padding-left: 20px;
+}
+
+/* CSS Text  */
+
+.text-property-menu {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-semi-bold);
+  line-height: 36px;
+  color: var(--clr-neutral-400);
+}
 
 /* cta */
 
@@ -198,6 +273,12 @@ body {
 .fs-600 {
   font-size: var(--fs-600);
 }
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
 
 .padding-block-900 {
   padding-block: var(--size-900);
@@ -218,96 +299,42 @@ body {
   margin-inline: auto;
   padding-block: 1rem;
 }
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  gap: clamp(1rem,4vw,3rem);
-}
-.cart-button {
-  height: 43px;
-  width: 43px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  background: none;
-}
-.small-button {
-  font-size: var(--fs-small-button);
-  font-weight: var(--fw-semi-bold);
-  width: var(--size-800);
-  height: var(--size-600);
-  cursor: pointer;
-  text-decoration: none;
-  border: 2px solid var(--clr-accent-400);
-  border-radius: var(--size-200) ;
-  color: var(--clr-accent-400);
-  background-color: var(--clr-primary-400);
-  line-height: var(--size-500);
-}
-.normal-button {
-  font-size: var(--fs-normal-button);
-  font-weight: var(--fw-semi-bold);
-  width: 150px;
-  height: var(--size-700);
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: var(--size-600) ;
-  color: var(--clr-primary-400);
-  background-color: var(--clr-neutral-400);
-  box-shadow: 0px 4px 32px rgba(223, 195, 124, 0.25); 
-}
-.search-bar {
-  width: 222px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 2px solid red;
-  border-radius: var(--size-500) ;
-  padding-right: 50px;
-  
 
-}
-.search-bar input {
-  font-size: var(--fs-300);
-  font-weight: var(--fw-regular);
-  line-height: var(--size-400);
-  border: none;
-  padding-left: 10px;
-}
-
-.search-bar button {
-  padding-left: 20px;
-}
+/* Menu Item  */
 
 .card-content {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  margin-inline: auto;
+  grid-template-columns: 2fr 1fr;
+  padding-top: 19px;
+  margin: 0px 30px;
 }
 
 .grid-items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
 .card-holder {
   width: 356px ;
   height: 385px;
-  /* border: 2px solid blue; */
   border-radius: 12px;
   box-shadow: 0px 0px 10px var(--clr-neutral-400)
 }
 
-.card-holder > * {
+.card-holder > img {
   margin-inline: auto;
   margin-top: var(--size-600);
 }
 
+.card-content > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 36px;
+}
+
+.card-content > p {
+  line-height: 21px;
+}
