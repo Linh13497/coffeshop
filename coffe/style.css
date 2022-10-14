@@ -288,8 +288,8 @@ body {
 }
 
 .even-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -300,20 +300,25 @@ body {
   padding-block: 1rem;
 }
 
+/* Delivery Service  */
+
+.delivery-content {
+  justify-content: center;
+  align-items: center;
+}
+
 /* Menu Item  */
 
-.card-content {
+.card-content-menu {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 80% 20%;
   padding-top: 19px;
-  margin: 0px 30px;
+  margin: 0px 35px;
 }
 
 .grid-items {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr ;
 }
 
 .card-holder {
@@ -328,13 +333,34 @@ body {
   margin-top: var(--size-600);
 }
 
-.card-content > * {
+.card-content-menu > * {
   display: flex;
-  justify-content: center;
   align-items: center;
   line-height: 36px;
 }
 
-.card-content > p {
+
+.card-content-menu h5:nth-child(1){
+  justify-content: flex-start;
+}
+
+.card-content-menu h5:nth-child(2){
+  justify-content: flex-end;
+}
+
+
+.card-content-menu > div {
+  justify-content: flex-end;
+}
+
+.card-content-menu > p {
+  justify-content: flex-start;
   line-height: 21px;
+}
+
+.card-content-popular {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding-top: 19px;
+  margin: 0px 35px;
 }
