@@ -309,7 +309,7 @@ body {
 
 /* Menu Item  */
 
-.card-content-menu {
+.card-content {
   display: grid;
   grid-template-columns: 80% 20%;
   padding-top: 19px;
@@ -319,6 +319,7 @@ body {
 .grid-items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
+  gap: 40px;
 }
 
 .card-holder {
@@ -333,34 +334,35 @@ body {
   margin-top: var(--size-600);
 }
 
-.card-content-menu > * {
+.card-content > * {
   display: flex;
   align-items: center;
   line-height: 36px;
 }
 
 
-.card-content-menu h5:nth-child(1){
+.card-content h5:nth-child(1){
   justify-content: flex-start;
 }
 
-.card-content-menu h5:nth-child(2){
+.card-content h5:nth-child(2){
   justify-content: flex-end;
 }
 
 
-.card-content-menu > div {
+.card-content > div {
   justify-content: flex-end;
 }
 
-.card-content-menu > p {
+.card-content > p {
   justify-content: flex-start;
   line-height: 21px;
 }
 
-.card-content-popular {
-  display: grid;
-  grid-template-columns: 80% 20%;
-  padding-top: 19px;
-  margin: 0px 35px;
+.drink-property {
+  position: relative;
 }
+
+
+
+
